@@ -1,8 +1,8 @@
 package com.example.springboot_demo2.apisecurity;
 
-import com.chenjing.apisecurity.decrypt.Decrypt;
-import com.chenjing.apisecurity.encrypt.Encrypt;
-import com.chenjing.apisecurity.util.DesUtils;
+import com.example.springboot_demo2.apisecurity.decrypt.Decrypt;
+import com.example.springboot_demo2.apisecurity.encrypt.Encrypt;
+import com.example.springboot_demo2.apisecurity.util.DesUtils;
 import com.google.common.base.Preconditions;
 import org.springframework.util.StringUtils;
 

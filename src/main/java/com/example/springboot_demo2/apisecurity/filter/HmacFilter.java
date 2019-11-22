@@ -1,12 +1,12 @@
 package com.example.springboot_demo2.apisecurity.filter;
 
-import com.chenjing.apisecurity.ApiProperties;
-import com.chenjing.apisecurity.ProductProvider;
-import com.chenjing.apisecurity.exception.InvalidHeaderException;
-import com.chenjing.apisecurity.exception.InvalidSignException;
-import com.chenjing.apisecurity.hmac.SignBuilder;
-import com.chenjing.apisecurity.util.SpringActiveUtils;
-import com.chenjing.apisecurity.wrapper.HttpRequestWrapper;
+import com.example.springboot_demo2.apisecurity.ApiProperties;
+import com.example.springboot_demo2.apisecurity.ProductProvider;
+import com.example.springboot_demo2.apisecurity.exception.InvalidHeaderException;
+import com.example.springboot_demo2.apisecurity.exception.InvalidSignException;
+import com.example.springboot_demo2.apisecurity.hmac.SignBuilder;
+import com.example.springboot_demo2.apisecurity.util.SpringActiveUtils;
+import com.example.springboot_demo2.apisecurity.wrapper.HttpRequestWrapper;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;

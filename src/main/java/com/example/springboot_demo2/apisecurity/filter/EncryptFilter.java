@@ -1,10 +1,10 @@
 package com.example.springboot_demo2.apisecurity.filter;
 
-import com.chenjing.apisecurity.ApiProperties;
-import com.chenjing.apisecurity.ProductProvider;
-import com.chenjing.apisecurity.encrypt.Encrypt;
-import com.chenjing.apisecurity.util.SpringActiveUtils;
-import com.chenjing.apisecurity.wrapper.HttpResponseWrapper;
+import com.example.springboot_demo2.apisecurity.ApiProperties;
+import com.example.springboot_demo2.apisecurity.ProductProvider;
+import com.example.springboot_demo2.apisecurity.encrypt.Encrypt;
+import com.example.springboot_demo2.apisecurity.util.SpringActiveUtils;
+import com.example.springboot_demo2.apisecurity.wrapper.HttpResponseWrapper;
 import lombok.Cleanup;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +31,8 @@ public class EncryptFilter implements Filter {
     private SpringActiveUtils springActiveUtils;
 
     private ProductProvider productProvider;
+
+
 
     public EncryptFilter(ApiProperties apiProperties, Encrypt encrypt, SpringActiveUtils springActiveUtils,
                          ProductProvider productProvider) {

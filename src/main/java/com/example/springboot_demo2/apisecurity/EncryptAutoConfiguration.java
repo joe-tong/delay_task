@@ -1,8 +1,8 @@
 package com.example.springboot_demo2.apisecurity;
 
-import com.chenjing.apisecurity.encrypt.Encrypt;
-import com.chenjing.apisecurity.filter.EncryptFilter;
-import com.chenjing.apisecurity.util.SpringActiveUtils;
+import com.example.springboot_demo2.apisecurity.encrypt.Encrypt;
+import com.example.springboot_demo2.apisecurity.filter.EncryptFilter;
+import com.example.springboot_demo2.apisecurity.util.SpringActiveUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -43,6 +43,7 @@ public class EncryptAutoConfiguration {
         EncryptFilter decryptFilter = new EncryptFilter(apiProperties, encrypt, springActiveUtils, productProvider);
         FilterRegistrationBean<EncryptFilter> registration = new FilterRegistrationBean<>();
         registration.setFilter(decryptFilter);
+//        registration.addUrlPatterns("/*");
         registration.addUrlPatterns(apiProperties.getEncrypt().getUrlPatterns().toArray(new String[0]));
         registration.setName("encryptFilter");
         registration.setOrder(Ordered.LOWEST_PRECEDENCE - 2);

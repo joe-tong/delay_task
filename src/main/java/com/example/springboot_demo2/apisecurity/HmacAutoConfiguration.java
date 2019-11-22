@@ -1,9 +1,9 @@
 package com.example.springboot_demo2.apisecurity;
 
-import com.chenjing.apisecurity.filter.HmacFilter;
-import com.chenjing.apisecurity.hmac.HmacSha256Sign;
-import com.chenjing.apisecurity.hmac.SignBuilder;
-import com.chenjing.apisecurity.util.SpringActiveUtils;
+import com.example.springboot_demo2.apisecurity.filter.HmacFilter;
+import com.example.springboot_demo2.apisecurity.hmac.HmacSha256Sign;
+import com.example.springboot_demo2.apisecurity.hmac.SignBuilder;
+import com.example.springboot_demo2.apisecurity.util.SpringActiveUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -42,6 +42,7 @@ public class HmacAutoConfiguration {
         HmacFilter hmacFilter = new HmacFilter(signBuilder, apiProperties, springActiveUtils, productProvider);
         FilterRegistrationBean<HmacFilter> registration = new FilterRegistrationBean<>();
         List<String> urlPatterns = apiProperties.getHmac().getUrlPatterns();
+//        registration.addUrlPatterns("/*");
         registration.addUrlPatterns(urlPatterns.toArray(new String[0]));
         registration.setFilter(hmacFilter);
         registration.setName("hmacFilter");

@@ -1,10 +1,10 @@
 package com.example.springboot_demo2.apisecurity.filter;
 
-import com.chenjing.apisecurity.ApiProperties;
-import com.chenjing.apisecurity.ProductProvider;
-import com.chenjing.apisecurity.decrypt.Decrypt;
-import com.chenjing.apisecurity.util.SpringActiveUtils;
-import com.chenjing.apisecurity.wrapper.HttpRequestWrapper;
+import com.example.springboot_demo2.apisecurity.ApiProperties;
+import com.example.springboot_demo2.apisecurity.ProductProvider;
+import com.example.springboot_demo2.apisecurity.decrypt.Decrypt;
+import com.example.springboot_demo2.apisecurity.util.SpringActiveUtils;
+import com.example.springboot_demo2.apisecurity.wrapper.HttpRequestWrapper;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;
@@ -28,6 +28,9 @@ public class DecryptFilter implements Filter {
     private SpringActiveUtils springActiveUtils;
 
     private ProductProvider productProvider;
+
+    public DecryptFilter() {
+    }
 
     public DecryptFilter(ApiProperties apiProperties, Decrypt decrypt, SpringActiveUtils springActiveUtils,
                          ProductProvider productProvider) {

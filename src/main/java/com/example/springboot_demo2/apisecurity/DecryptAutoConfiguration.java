@@ -1,8 +1,8 @@
 package com.example.springboot_demo2.apisecurity;
 
-import com.chenjing.apisecurity.decrypt.Decrypt;
-import com.chenjing.apisecurity.filter.DecryptFilter;
-import com.chenjing.apisecurity.util.SpringActiveUtils;
+import com.example.springboot_demo2.apisecurity.decrypt.Decrypt;
+import com.example.springboot_demo2.apisecurity.filter.DecryptFilter;
+import com.example.springboot_demo2.apisecurity.util.SpringActiveUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
