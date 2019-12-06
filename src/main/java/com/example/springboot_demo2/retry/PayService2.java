@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalTime;
 
 @Service
-public class PayService {
+public class PayService2 {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -28,8 +28,21 @@ public class PayService {
     }
 
     @Recover
-    public int recover(Exception e) throws Exception {
-        logger.warn("recover 减库存失败！！！");
+    public int recoverPay(Exception e) throws Exception {
+        logger.warn("recoverPay 减库存失败！！！");
+        //记日志到数据库
+        return totalNum;
+    }
+
+    /**
+     * 如何异常和返回参数一样，选择最后一个执行
+     * @param e
+     * @return
+     * @throws Exception
+     */
+    @Recover
+    public int recoverPay2(IndexOutOfBoundsException e) throws Exception {
+        logger.warn("recoverPay2 减库存失败！！！");
         //记日志到数据库
         return totalNum;
     }
